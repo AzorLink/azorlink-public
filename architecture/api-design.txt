@@ -1,0 +1,181 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                        API DESIGN                                 ║
+║                      RESTful API Guidelines                       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      API STRUCTURE                               │
+└─────────────────────────────────────────────────────────────────┘
+
+Base URL: https://api.azorlink.example.com/v1
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      ENDPOINTS                                   │
+└─────────────────────────────────────────────────────────────────┘
+
+AUTHENTICATION
+══════════════
+POST   /auth/login          - Autenticar utilizador
+POST   /auth/register       - Registar novo utilizador
+POST   /auth/logout         - Terminar sessão
+POST   /auth/refresh        - Renovar token
+GET    /auth/me             - Obter utilizador atual
+
+USERS
+═════
+GET    /users               - Listar utilizadores
+GET    /users/:id           - Obter utilizador
+POST   /users               - Criar utilizador
+PUT    /users/:id           - Atualizar utilizador
+DELETE /users/:id           - Eliminar utilizador
+
+RESOURCES
+═════════
+GET    /resources           - Listar recursos
+GET    /resources/:id       - Obter recurso
+POST   /resources           - Criar recurso
+PUT    /resources/:id       - Atualizar recurso
+DELETE /resources/:id       - Eliminar recurso
+
+HEALTH
+══════
+GET    /health              - Health check
+GET    /health/db           - Database health
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      REQUEST FORMAT                               │
+└─────────────────────────────────────────────────────────────────┘
+
+Headers:
+  Content-Type: application/json
+  Authorization: Bearer {token}
+  Accept: application/json
+
+Query Parameters:
+  ?page=1&limit=10&sort=created_at&order=desc
+  ?filter=status:active
+  ?search=keyword
+
+Request Body (JSON):
+  {
+    "field1": "value1",
+    "field2": "value2"
+  }
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      RESPONSE FORMAT                             │
+└─────────────────────────────────────────────────────────────────┘
+
+Success Response (200/201):
+  {
+    "success": true,
+    "data": { ... },
+    "message": "Operation successful"
+  }
+
+List Response (200):
+  {
+    "success": true,
+    "data": [ ... ],
+    "pagination": {
+      "page": 1,
+      "limit": 10,
+      "total": 100,
+      "totalPages": 10
+    }
+  }
+
+Error Response (4xx/5xx):
+  {
+    "success": false,
+    "error": {
+      "code": "ERROR_CODE",
+      "message": "Error message",
+      "details": { ... }
+    }
+  }
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      STATUS CODES                                │
+└─────────────────────────────────────────────────────────────────┘
+
+2xx - Success
+  200 OK              - Request successful
+  201 Created         - Resource created
+  204 No Content      - Success, no content
+
+4xx - Client Error
+  400 Bad Request     - Invalid request
+  401 Unauthorized    - Authentication required
+  403 Forbidden       - Insufficient permissions
+  404 Not Found       - Resource not found
+  409 Conflict        - Resource conflict
+  422 Unprocessable   - Validation error
+
+5xx - Server Error
+  500 Internal Error  - Server error
+  503 Service Unavailable - Service down
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      VERSIONING                                   │
+└─────────────────────────────────────────────────────────────────┘
+
+URL Versioning:
+  /v1/users
+  /v2/users
+
+Header Versioning (Alternative):
+  Accept: application/vnd.azorlink.v1+json
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      RATE LIMITING                               │
+└─────────────────────────────────────────────────────────────────┘
+
+Limits:
+  - Authenticated: 1000 requests/hour
+  - Unauthenticated: 100 requests/hour
+  - Auth endpoints: 10 requests/hour
+
+Headers:
+  X-RateLimit-Limit: 1000
+  X-RateLimit-Remaining: 999
+  X-RateLimit-Reset: 1640995200
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      PAGINATION                                  │
+└─────────────────────────────────────────────────────────────────┘
+
+Query Parameters:
+  ?page=1          - Page number (default: 1)
+  ?limit=10        - Items per page (default: 10, max: 100)
+
+Response:
+  {
+    "pagination": {
+      "page": 1,
+      "limit": 10,
+      "total": 100,
+      "totalPages": 10,
+      "hasNext": true,
+      "hasPrev": false
+    }
+  }
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      FILTERING & SORTING                         │
+└─────────────────────────────────────────────────────────────────┘
+
+Filtering:
+  ?status=active
+  ?created_at[gte]=2024-01-01
+  ?tags[]=tag1&tags[]=tag2
+
+Sorting:
+  ?sort=created_at
+  ?sort=-created_at  (descending)
+  ?sort=name,created_at
+
+Search:
+  ?search=keyword
+  ?q=query
+

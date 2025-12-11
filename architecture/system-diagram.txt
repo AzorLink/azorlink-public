@@ -1,0 +1,91 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                    DIAGRAMA DO SISTEMA                           ║
+║                      AzorLink - Semântica 2025                   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+                    ┌─────────────────────┐
+                    │   USER / CLIENT     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+        ┌──────────────────────────────────────────┐
+        │         FRONTEND (Next.js)               │
+        │  ┌────────────────────────────────────┐  │
+        │  │  App Router                        │  │
+        │  │  - Pages                          │  │
+        │  │  - Components                     │  │
+        │  │  - Layouts                        │  │
+        │  └────────────────────────────────────┘  │
+        │  ┌────────────────────────────────────┐  │
+        │  │  Client-Side Logic                 │  │
+        │  │  - State Management                │  │
+        │  │  - API Calls                      │  │
+        │  │  - Hooks                          │  │
+        │  └────────────────────────────────────┘  │
+        └──────────────────┬───────────────────────┘
+                           │
+                           │ HTTP/HTTPS
+                           │ REST API
+                           ▼
+        ┌──────────────────────────────────────────┐
+        │         BACKEND (Node.js/Express)         │
+        │  ┌────────────────────────────────────┐  │
+        │  │  API Layer                        │  │
+        │  │  - Routes                         │  │
+        │  │  - Controllers                    │  │
+        │  │  - Middleware                     │  │
+        │  └──────────────┬─────────────────────┘  │
+        │                 │                         │
+        │  ┌──────────────▼─────────────────────┐  │
+        │  │  Business Logic Layer              │  │
+        │  │  - Services                       │  │
+        │  │  - Validators                     │  │
+        │  │  - Utilities                      │  │
+        │  └──────────────┬─────────────────────┘  │
+        │                 │                         │
+        │  ┌──────────────▼─────────────────────┐  │
+        │  │  Data Access Layer                  │  │
+        │  │  - Models                          │  │
+        │  │  - Repositories                    │  │
+        │  └──────────────┬─────────────────────┘  │
+        └─────────────────┼────────────────────────┘
+                          │
+                          │ Database Queries
+                          ▼
+        ┌──────────────────────────────────────────┐
+        │         DATABASE                          │
+        │  ┌────────────────────────────────────┐  │
+        │  │  [Database System]                 │  │
+        │  │  - Tables                          │  │
+        │  │  - Indexes                        │  │
+        │  │  - Relationships                  │  │
+        │  └────────────────────────────────────┘  │
+        └──────────────────────────────────────────┘
+
+        ┌──────────────────────────────────────────┐
+        │      EXTERNAL SERVICES (Optional)         │
+        │  ┌──────────┐  ┌──────────┐            │
+        │  │  Email   │  │  Storage  │  ...       │
+        │  └──────────┘  └──────────┘            │
+        └──────────────────────────────────────────┘
+
+FLUXO DE DADOS:
+═══════════════
+1. User interage com Frontend
+2. Frontend faz requisição para Backend API
+3. Backend processa através das camadas:
+   - API Layer (validação, autenticação)
+   - Business Logic Layer (lógica de negócio)
+   - Data Access Layer (acesso a dados)
+4. Backend consulta Database
+5. Resposta retorna através das camadas
+6. Frontend atualiza UI
+
+SEGURANÇA:
+══════════
+- HTTPS para comunicação
+- JWT para autenticação
+- Validação de inputs
+- Rate limiting
+- CORS configurado
+

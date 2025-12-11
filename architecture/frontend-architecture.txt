@@ -1,0 +1,99 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                  ARQUITETURA DO FRONTEND                        ║
+║                    Next.js 14 + React + TypeScript              ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      APP ROUTER (Next.js)                        │
+│                         app/                                     │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  layout.tsx          - Layout raiz                       │   │
+│  │  page.tsx            - Página inicial                    │   │
+│  │  globals.css         - Estilos globais                   │   │
+│  │  └── about/          - Rota /about                        │   │
+│  │      └── page.tsx                                        │   │
+│  └──────────────────────────────────────────────────────────┘   │
+└──────────────────────────────┬──────────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      COMPONENTS LAYER                            │
+│                      components/                                 │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  UI Components                                           │   │
+│  │  ├── Header.tsx         - Cabeçalho                     │   │
+│  │  ├── Footer.tsx         - Rodapé                         │   │
+│  │  ├── Button.tsx         - Botão reutilizável             │   │
+│  │  ├── Card.tsx           - Cartão reutilizável           │   │
+│  │  └── ...                - Mais componentes               │   │
+│  │                                                           │   │
+│  │  Feature Components                                      │   │
+│  │  ├── UserProfile/       - Perfil de utilizador          │   │
+│  │  ├── ResourceList/      - Lista de recursos              │   │
+│  │  └── ...                - Mais features                  │   │
+│  └──────────────────────────────────────────────────────────┘   │
+└──────────────────────────────┬──────────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      LIBRARY LAYER                               │
+│                         lib/                                     │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  api.ts              - Cliente de API                    │   │
+│  │  utils.ts            - Funções utilitárias               │   │
+│  │  hooks/                                                  │   │
+│  │    └── useAuth.ts    - Hook de autenticação              │   │
+│  │  types/                                                  │   │
+│  │    └── index.ts      - Definições de tipos              │   │
+│  └──────────────────────────────────────────────────────────┘   │
+└──────────────────────────────┬──────────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      STATE MANAGEMENT                            │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  - React Hooks (useState, useEffect)                     │   │
+│  │  - Context API (se necessário)                           │   │
+│  │  - Server State (React Query - opcional)                │   │
+│  └──────────────────────────────────────────────────────────┘   │
+└──────────────────────────────┬──────────────────────────────────┘
+                               │
+                               ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      STYLING LAYER                               │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  - Tailwind CSS                                          │   │
+│  │  - CSS Modules (opcional)                                │   │
+│  │  - Global Styles                                          │   │
+│  └──────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      PUBLIC ASSETS                               │
+│                      public/                                     │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │  - favicon.ico                                           │   │
+│  │  - images/                                               │   │
+│  │  - fonts/                                                │   │
+│  └──────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+
+FLUXO DE DADOS:
+═══════════════
+1. User interage com Component
+2. Component usa Hook para estado/comunicação
+3. Hook chama API Client
+4. API Client faz requisição HTTP para Backend
+5. Resposta retorna e atualiza estado
+6. Component re-renderiza com novos dados
+
+PRINCÍPIOS:
+═══════════
+✓ Component-based architecture
+✓ Server-side rendering (SSR)
+✓ Static site generation (SSG)
+✓ Client-side interactivity
+✓ Type safety com TypeScript
+✓ Responsive design
+✓ Accessibility (a11y)
+

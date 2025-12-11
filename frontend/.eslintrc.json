@@ -1,0 +1,7 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // TODO: Configurar regras de linting personalizadas
+  }
+}
+

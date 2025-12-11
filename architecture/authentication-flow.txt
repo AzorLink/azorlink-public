@@ -1,0 +1,170 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                    FLUXO DE AUTENTICAÇÃO                        ║
+║                      JWT Token Based Auth                        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────┐
+│                         LOGIN FLOW                               │
+└─────────────────────────────────────────────────────────────────┘
+
+    ┌──────────┐
+    │   USER   │
+    └────┬─────┘
+         │
+         │ 1. Submete credenciais
+         ▼
+    ┌─────────────────┐
+    │   FRONTEND      │
+    │  Login Form     │
+    └────┬────────────┘
+         │
+         │ 2. POST /api/auth/login
+         │    { email, password }
+         ▼
+    ┌─────────────────┐
+    │   BACKEND        │
+    │  Auth Controller │
+    └────┬────────────┘
+         │
+         │ 3. Valida credenciais
+         ▼
+    ┌─────────────────┐
+    │  Auth Service   │
+    │  - Verifica user│
+    │  - Valida pass  │
+    └────┬────────────┘
+         │
+         │ 4. Consulta database
+         ▼
+    ┌─────────────────┐
+    │    DATABASE      │
+    │  Users Table     │
+    └────┬────────────┘
+         │
+         │ 5. Retorna user
+         ▼
+    ┌─────────────────┐
+    │  Auth Service   │
+    │  - Gera JWT     │
+    │  - Gera Refresh │
+    └────┬────────────┘
+         │
+         │ 6. Retorna tokens
+         ▼
+    ┌─────────────────┐
+    │   BACKEND       │
+    │  Response       │
+    └────┬────────────┘
+         │
+         │ 7. { token, refreshToken, user }
+         ▼
+    ┌─────────────────┐
+    │   FRONTEND      │
+    │  - Guarda token │
+    │  - Guarda user  │
+    └────┬────────────┘
+         │
+         │ 8. Redireciona
+         ▼
+    ┌──────────┐
+    │   USER   │
+    │ Logged in│
+    └──────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    AUTHENTICATED REQUEST FLOW                    │
+└─────────────────────────────────────────────────────────────────┘
+
+    ┌──────────┐
+    │   USER   │
+    └────┬─────┘
+         │
+         │ 1. Faz requisição
+         ▼
+    ┌─────────────────┐
+    │   FRONTEND      │
+    │  API Client     │
+    └────┬────────────┘
+         │
+         │ 2. Adiciona token ao header
+         │    Authorization: Bearer {token}
+         ▼
+    ┌─────────────────┐
+    │   BACKEND        │
+    │  Auth Middleware │
+    └────┬────────────┘
+         │
+         │ 3. Valida token
+         │    - Verifica assinatura
+         │    - Verifica expiração
+         ▼
+    ┌─────────────────┐
+    │  Token Valid?   │
+    └──┬───────────┬──┘
+       │           │
+    YES│           │NO
+       │           │
+       ▼           ▼
+    ┌─────┐    ┌──────────┐
+    │ OK  │    │ 401 Error│
+    └──┬──┘    └──────────┘
+       │
+       │ 4. Adiciona user ao request
+       ▼
+    ┌─────────────────┐
+    │   Controller    │
+    │  Processa req   │
+    └─────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      REFRESH TOKEN FLOW                          │
+└─────────────────────────────────────────────────────────────────┘
+
+    ┌──────────┐
+    │   USER   │
+    └────┬─────┘
+         │
+         │ 1. Access token expirado
+         ▼
+    ┌─────────────────┐
+    │   FRONTEND      │
+    │  Detecta 401    │
+    └────┬────────────┘
+         │
+         │ 2. POST /api/auth/refresh
+         │    { refreshToken }
+         ▼
+    ┌─────────────────┐
+    │   BACKEND       │
+    │  Auth Service   │
+    └────┬────────────┘
+         │
+         │ 3. Valida refresh token
+         ▼
+    ┌─────────────────┐
+    │  Valid?         │
+    └──┬───────────┬──┘
+       │           │
+    YES│           │NO
+       │           │
+       ▼           ▼
+    ┌─────┐    ┌──────────┐
+    │ OK  │    │ 401 Error│
+    └──┬──┘    └──────────┘
+       │
+       │ 4. Gera novo access token
+       ▼
+    ┌─────────────────┐
+    │   FRONTEND      │
+    │  Atualiza token │
+    └─────────────────┘
+
+SEGURANÇA:
+══════════
+- Tokens armazenados em httpOnly cookies (recomendado)
+- Ou localStorage com proteção XSS
+- HTTPS obrigatório
+- Token expiration configurável
+- Refresh token rotation
+- Rate limiting em endpoints de auth
+

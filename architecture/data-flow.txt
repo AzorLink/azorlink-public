@@ -1,0 +1,184 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                        FLUXO DE DADOS                            ║
+║                    Request/Response Cycle                        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    CREATE OPERATION                              │
+└─────────────────────────────────────────────────────────────────┘
+
+User Input
+    │
+    ▼
+┌─────────────────┐
+│  Form Component │  - Validação client-side
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  API Client     │  - Prepara payload
+└────────┬────────┘
+         │
+         │ POST /api/resources
+         │ { title, description, ... }
+         ▼
+┌─────────────────┐
+│  Auth Middleware│  - Verifica autenticação
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Validation     │  - Valida dados
+│  Middleware     │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Controller     │  - Recebe request
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Service        │  - Lógica de negócio
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Model          │  - Valida schema
+└────────┬────────┘
+         │
+         │ INSERT INTO resources
+         ▼
+┌─────────────────┐
+│  Database       │  - Persiste dados
+└────────┬────────┘
+         │
+         │ { id, ...created }
+         ▼
+┌─────────────────┐
+│  Service        │  - Transforma resposta
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Controller     │  - Formata response
+└────────┬────────┘
+         │
+         │ 201 Created
+         │ { data: {...} }
+         ▼
+┌─────────────────┐
+│  API Client     │  - Processa resposta
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Component      │  - Atualiza UI
+└─────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                      READ OPERATION                              │
+└─────────────────────────────────────────────────────────────────┘
+
+Component Mount
+    │
+    ▼
+┌─────────────────┐
+│  useEffect Hook │  - Trigger fetch
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  API Client     │  - GET /api/resources
+└────────┬────────┘
+         │
+         │ Request
+         ▼
+┌─────────────────┐
+│  Auth Middleware│  - Verifica token
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Controller     │  - Recebe request
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Service        │  - Prepara query
+└────────┬────────┘
+         │
+         │ SELECT * FROM resources
+         ▼
+┌─────────────────┐
+│  Database       │  - Executa query
+└────────┬────────┘
+         │
+         │ [results...]
+         ▼
+┌─────────────────┐
+│  Service        │  - Filtra/Transforma
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Controller     │  - Pagina resultados
+└────────┬────────┘
+         │
+         │ 200 OK
+         │ { data: [...], pagination: {...} }
+         ▼
+┌─────────────────┐
+│  API Client     │  - Retorna dados
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Component      │  - Renderiza lista
+│  State Update   │
+└─────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    ERROR HANDLING FLOW                           │
+└─────────────────────────────────────────────────────────────────┘
+
+Error Occurs
+    │
+    ▼
+┌─────────────────┐
+│  Service/Model  │  - Lança AppError
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Error Handler  │  - Captura erro
+│  Middleware      │
+└────────┬────────┘
+         │
+         │ Log error
+         ▼
+┌─────────────────┐
+│  Format Error   │  - Formata resposta
+└────────┬────────┘
+         │
+         │ { error: "message", code: 400 }
+         ▼
+┌─────────────────┐
+│  API Client     │  - Detecta erro
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Component      │  - Mostra mensagem
+│  Error State    │
+└─────────────────┘
+
+OTIMIZAÇÕES:
+═════════════
+- Caching de dados frequentes
+- Paginação para grandes datasets
+- Lazy loading de componentes
+- Debounce em pesquisas
+- Optimistic updates
+- Error retry logic
+
