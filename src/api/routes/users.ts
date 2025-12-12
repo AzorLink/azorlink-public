@@ -1,11 +1,14 @@
 /**
- * User Routes
+ * User Routes (Demo Placeholder)
+ * 
+ * ⚠️ This is a DEMO PLACEHOLDER only.
+ * Production backend uses NestJS (not included in this repo).
  * 
  * Routes related to user management.
- * TODO: Implement user endpoints
+ * TODO: This is placeholder code - not intended to run.
  */
 
-import { Router } from 'express';
+import { Router } from 'express'; // Express used as simple demo example only
 
 const router = Router();
 

@@ -5,6 +5,8 @@
  * TODO: Implement resource endpoints
  */
 
+// ⚠️ Demo placeholder - Express used as simple example only
+// Production uses NestJS (not included in this repo)
 import { Router } from 'express';
 
 const router = Router();

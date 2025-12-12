@@ -5,6 +5,8 @@
  * TODO: Implement authentication logic
  */
 
+// ⚠️ Demo placeholder - Express types used as simple example only
+// Production uses NestJS (not included in this repo)
 import { Request, Response } from 'express';
 
 export const login = async (req: Request, res: Response) => {

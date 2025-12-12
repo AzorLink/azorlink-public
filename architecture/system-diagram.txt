@@ -28,7 +28,7 @@
                            │ REST API
                            ▼
         ┌──────────────────────────────────────────┐
-        │         BACKEND (Node.js/Express)         │
+        │    BACKEND (Node.js/TypeScript - Demo)    │
         │  ┌────────────────────────────────────┐  │
         │  │  API Layer                        │  │
         │  │  - Routes                         │  │

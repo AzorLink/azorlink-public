@@ -1,6 +1,9 @@
 ╔══════════════════════════════════════════════════════════════════╗
 ║                    ARQUITETURA AZORLINK                          ║
 ║                      Visão Geral do Sistema                       ║
+║                                                                   ║
+║  ⚠️ NOTE: This shows a DEMO structure.                          ║
+║     Production backend uses NestJS (not shown here).            ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -20,51 +23,67 @@
                                 │ HTTPS/REST API
                                 │
 ┌───────────────────────────────┴─────────────────────────────────┐
-│                      BACKEND SERVER                              │
+│              BACKEND SERVER (Demo Placeholder)                   │
 │                                                                   │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │              Node.js + Express + TypeScript              │   │
+│  │         Node.js + TypeScript (Demo Structure)            │   │
 │  │                                                           │   │
 │  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │   │
 │  │  │    Routes    │  │ Controllers   │  │  Middleware  │  │   │
+│  │  │  (demo)      │  │  (demo)       │  │  (demo)      │  │   │
 │  │  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘  │   │
 │  │         │                  │                  │          │   │
 │  │  ┌──────┴──────────────────┴──────────────────┴──────┐  │   │
-│  │  │                    Services                        │  │   │
+│  │  │                    Services (Demo)                  │  │   │
 │  │  └──────┬──────────────────┬──────────────────┬──────┘  │   │
 │  │         │                  │                  │          │   │
 │  │  ┌──────┴──────┐  ┌────────┴────────┐  ┌─────┴──────┐  │   │
-│  │  │   Models    │  │     Utils       │  │   Config   │  │   │
+│  │  │   Models    │  │     Utils        │  │   Config   │  │   │
+│  │  │  (demo)     │  │     (demo)       │  │  (demo)    │  │   │
 │  │  └─────────────┘  └─────────────────┘  └────────────┘  │   │
 │  └──────────────────────────────────────────────────────────┘   │
+│                                                                   │
+│  ⚠️  Production uses NestJS (not included in this repo)        │
 └───────────────────────────────┬─────────────────────────────────┘
                                 │
-                                │ Database Connection
+                                │ Database Connection (Demo)
                                 │
 ┌───────────────────────────────┴─────────────────────────────────┐
-│                         DATABASE                                  │
+│                    DATABASE (Placeholder)                        │
 │                                                                   │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │              [Database System]                            │   │
+│  │              [Database System - Demo]                    │   │
 │  │  ┌──────────┐  ┌──────────┐  ┌──────────┐              │   │
 │  │  │  Users   │  │Resources │  │  ...      │              │   │
+│  │  │ (demo)   │  │ (demo)   │  │  (demo)   │              │   │
 │  │  └──────────┘  └──────────┘  └──────────┘              │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────────────────────────────────────────┘
 
 LEGENDA:
 ═══════
-- Frontend: Next.js com React e TypeScript
-- Backend: Node.js com Express e TypeScript
-- Database: [TODO: Especificar sistema de base de dados]
-- Comunicação: REST API via HTTPS
-- Autenticação: JWT Tokens
+- Frontend: Next.js with React and TypeScript
+- Backend (Demo): Node.js with TypeScript (simplified structure)
+- Backend (Production): NestJS (not included in this repo)
+- Database: [Placeholder - production DB not included]
+- Communication: REST API via HTTPS
+- Authentication: JWT Tokens (demo structure)
 
 CARACTERÍSTICAS:
 ════════════════
-✓ Arquitetura em camadas
-✓ Separação de responsabilidades
-✓ API RESTful
-✓ TypeScript para type safety
-✓ Componentes reutilizáveis
+✓ Demo structure for public showcase
+✓ Layered architecture (simplified)
+✓ RESTful API structure (demo)
+✓ TypeScript for type safety
+✓ Reusable components (frontend)
 
+⚠️  IMPORTANT:
+══════════════
+This is a PUBLIC-SAFE DEMO repository.
+- No production code included
+- No real database connections
+- No WhatsApp/360Dialog integration
+- No automation logic
+- Structure only for demonstration
+
+Production backend uses NestJS with a different architecture.

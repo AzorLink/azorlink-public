@@ -5,6 +5,8 @@
  * TODO: Implement business logic
  */
 
+// ⚠️ Demo placeholder - Express types used as simple example only
+// Production uses NestJS (not included in this repo)
 import { Request, Response } from 'express';
 
 export const getAllResources = async (req: Request, res: Response) => {

@@ -1,11 +1,14 @@
 /**
- * API Routes - Main Router
+ * API Routes - Main Router (Demo Placeholder)
  * 
- * This file centralizes all API routes.
- * TODO: Implement complete routing
+ * ⚠️ This is a DEMO PLACEHOLDER only.
+ * Production backend uses NestJS (not included in this repo).
+ * 
+ * This file shows a simplified structure for demonstration.
+ * TODO: This is placeholder code - not intended to run.
  */
 
-import { Router } from 'express';
+import { Router } from 'express'; // Express used as simple demo example only
 
 const router = Router();
 

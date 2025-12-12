@@ -5,6 +5,8 @@
  * TODO: Implement complete validation
  */
 
+// ⚠️ Demo placeholder - Express types used as simple example only
+// Production uses NestJS (not included in this repo)
 import { Request, Response, NextFunction } from 'express';
 import { ValidationError } from '../utils/errors';
 

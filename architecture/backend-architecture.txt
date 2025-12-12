@@ -1,112 +1,89 @@
 ╔══════════════════════════════════════════════════════════════════╗
-║                  ARQUITETURA DO BACKEND                         ║
-║                    Node.js + Express + TypeScript                ║
+║              BACKEND ARCHITECTURE (Demo Placeholder)             ║
+║                    Node.js + TypeScript (Demo)                   ║
+║                                                                   ║
+║  ⚠️ NOTE: Production backend uses NestJS.                        ║
+║     This diagram shows a simplified demo structure only.         ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 ┌─────────────────────────────────────────────────────────────────┐
 │                         ENTRY POINT                              │
 │                         src/index.ts                             │
-│  - Inicializa servidor Express                                   │
-│  - Configura middleware global                                   │
-│  - Conecta à base de dados                                       │
-│  - Inicia servidor HTTP                                          │
+│  - Demo placeholder entry point                                  │
+│  - Shows basic structure (not production code)                 │
+│  - Production uses NestJS with different architecture           │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                      MIDDLEWARE LAYER                            │
+│                      MIDDLEWARE LAYER (Demo)                      │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  - CORS                                                   │   │
-│  │  - Body Parser                                           │   │
-│  │  - Authentication                                        │   │
-│  │  - Error Handler                                         │   │
-│  │  - Request Logger                                        │   │
+│  │  - CORS (placeholder)                                    │   │
+│  │  - Body Parser (placeholder)                            │   │
+│  │  - Authentication (placeholder)                         │   │
+│  │  - Error Handler (placeholder)                           │   │
+│  │  - Request Logger (placeholder)                          │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                         ROUTES LAYER                             │
+│                         ROUTES LAYER (Demo)                       │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  /api                                                    │   │
-│  │    ├── /auth    → authRoutes                            │   │
-│  │    ├── /users   → userRoutes                            │   │
-│  │    ├── /resources → resourceRoutes                      │   │
-│  │    └── /health  → healthCheck                           │   │
+│  │  - /api/auth (placeholder)                               │   │
+│  │  - /api/users (placeholder)                               │   │
+│  │  - /api/resources (placeholder)                          │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                      CONTROLLERS LAYER                           │
+│                      CONTROLLERS LAYER (Demo)                     │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  - userController                                        │   │
-│  │  - resourceController                                    │   │
-│  │  - authController                                        │   │
-│  │                                                           │   │
-│  │  Responsabilidades:                                      │   │
-│  │  - Receber requests                                      │   │
-│  │  - Validar inputs                                        │   │
-│  │  - Chamar services                                       │   │
-│  │  - Retornar responses                                    │   │
+│  │  - authController.ts (placeholder)                       │   │
+│  │  - userController.ts (placeholder)                       │   │
+│  │  - resourceController.ts (placeholder)                  │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                       SERVICES LAYER                             │
+│                       SERVICES LAYER (Demo)                       │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  - userService                                           │   │
-│  │  - resourceService                                       │   │
-│  │  - authService                                           │   │
-│  │                                                           │   │
-│  │  Responsabilidades:                                      │   │
-│  │  - Lógica de negócio                                     │   │
-│  │  - Validações complexas                                  │   │
-│  │  - Transformações de dados                               │   │
-│  │  - Orquestração de operações                             │   │
+│  │  - authService.ts (placeholder)                          │   │
+│  │  - userService.ts (placeholder)                          │   │
+│  │  - resourceService.ts (placeholder)                     │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                        MODELS LAYER                              │
+│                        MODELS LAYER (Demo)                        │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  - User                                                  │   │
-│  │  - Resource                                              │   │
-│  │                                                           │   │
-│  │  Responsabilidades:                                      │   │
-│  │  - Definição de schemas                                  │   │
-│  │  - Validações de modelo                                  │   │
-│  │  - Relacionamentos                                       │   │
-│  └──────────────────────────────────────────────────────────┘   │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                      DATABASE LAYER                              │
-│  ┌──────────────────────────────────────────────────────────┐   │
-│  │  - Database Connection                                   │   │
-│  │  - Query Builders                                        │   │
-│  │  - Migrations                                            │   │
+│  │  - User.ts (placeholder)                                │   │
+│  │  - Resource.ts (placeholder)                            │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────┐
-│                      UTILITIES & CONFIG                          │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
-│  │   Logger     │  │  Validator    │  │   Errors     │         │
-│  └──────────────┘  └──────────────┘  └──────────────┘         │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
-│  │   Database   │  │     Env       │  │   Types      │         │
-│  └──────────────┘  └──────────────┘  └──────────────┘         │
-└─────────────────────────────────────────────────────────────────┘
+═══════════════════════════════════════════════════════════════════
+IMPORTANT NOTES:
+═══════════════════════════════════════════════════════════════════
 
-PRINCÍPIOS:
-═══════════
-✓ Separação de responsabilidades
-✓ Single Responsibility Principle
-✓ Dependency Injection
-✓ Error handling centralizado
-✓ Type safety com TypeScript
+⚠️  This is a DEMO PLACEHOLDER structure only.
 
+✅  Production backend:
+    - Uses NestJS framework
+    - Different architecture and patterns
+    - Not included in this public repository
+
+✅  This public repo shows:
+    - Basic structure for demonstration
+    - Public-safe examples
+    - Documentation purposes only
+
+❌  NOT included:
+    - Real business logic
+    - Production database connections
+    - WhatsApp/360Dialog integration
+    - Automation rules
+    - Intent engine
