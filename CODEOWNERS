@@ -1,0 +1,16 @@
+# Code owners file
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+* @hugomelo123
+
+# Documentation
+/docs/ @hugomelo123
+/architecture/ @hugomelo123
+*.md @hugomelo123
+
+# Configuration files
+/.github/ @hugomelo123
+/.editorconfig @hugomelo123
+/.gitignore @hugomelo123
+

@@ -3,16 +3,18 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 [![Semântica 2025](https://img.shields.io/badge/semântica-2025-blue)](https://semantica2025.pt)
 
-> Public-facing repository for **AzorLink**: documentation, architecture and **safe demo placeholders** (no private automation logic, no tokens, no production rules).
+> **WhatsApp assistant for Azorean lodging owners** — automates guest communication (check-in, FAQs, house rules, local recommendations) with multilingual support (PT/EN/FR/DE).
+
+This is a **public-safe showcase repository** containing documentation, architecture, and demo placeholders. No private automation logic, tokens, or production configurations are included.
 
 ## 🌊 What is AzorLink?
 
 AzorLink helps local lodging owners in the Azores automate guest communication through **WhatsApp**:
-- Check-in instructions
-- FAQs (Wi-Fi, parking, arrival time)
-- House rules
-- Local recommendations
-- Multilingual support (PT/EN/FR/DE)
+- ✅ Check-in instructions
+- ✅ FAQs (Wi-Fi, parking, arrival time)
+- ✅ House rules
+- ✅ Local recommendations
+- ✅ Multilingual support (PT/EN/FR/DE)
 
 This repo exists to show the product vision and engineering structure **without exposing** proprietary automation logic.
 
@@ -28,10 +30,20 @@ This repo exists to show the product vision and engineering structure **without 
 ## 🔒 What's NOT included here
 
 To protect the product and clients:
-- ❌ No WhatsApp/360Dialog tokens
+- ❌ No WhatsApp/360Dialog tokens or API keys
 - ❌ No real automation rules or intent engine
 - ❌ No production database or infrastructure configuration
-- ❌ No proprietary business logic
+- ❌ No proprietary business logic or NLP models
+- ❌ No real-time message processing logic
+
+## 📸 Screenshots
+
+> **Note**: Screenshots and mockups are placeholders. Real UI previews coming soon.
+
+- `docs/screens/dashboard.png` - Dashboard mockup (placeholder)
+- `docs/screens/whatsapp-flow.png` - WhatsApp conversation flow diagram (placeholder)
+
+See [`docs/README.md`](./docs/README.md) for more details.
 
 ## 🧱 Project Structure
 
@@ -40,16 +52,13 @@ azorlink-public/
 ├── frontend/          # Next.js demo skeleton
 ├── src/               # Backend demo skeleton (placeholders)
 ├── docs/              # Documentation and API specs
+│   └── screens/       # Screenshots and mockups
 ├── architecture/      # Diagrams and technical overview
+├── .github/           # GitHub templates and workflows
 ├── ROADMAP.md         # Development roadmap
 ├── CONTRIBUTING.md    # Contribution guidelines
 └── SECURITY.md        # Security policy
 ```
-
-## 📸 Screenshots
-
-> Coming soon (public-safe UI previews).  
-Placeholders live in `docs/`.
 
 ## 🗺️ Roadmap
 
@@ -65,14 +74,17 @@ Built with the reality of Azorean hosts in mind:
 
 AzorLink bridges the gap between traditional hospitality and modern automation, designed specifically for the unique needs of Azorean tourism.
 
-## 🚀 Demo Only
+## ⚠️ This Repository is Not Runnable
 
-**⚠️ Important**: This repository contains **demo placeholders only**. 
+**Important**: This repository contains **demo placeholders and documentation only**. 
 
 The code here is for:
 - ✅ Documentation and structure showcase
 - ✅ Architecture demonstration
 - ✅ Contribution guidelines
+- ✅ Public-safe examples
+
+**This repo is NOT intended to be run locally.** It's a public-safe showcase of the project structure and vision.
 
 **For access to the private core or production deployment, please contact the maintainers.**
 
@@ -96,7 +108,7 @@ The code here is for:
 - **Demo backend skeleton** - Structure only (no production logic)
 - **TypeScript** - Type-safe codebase
 
-> **Note**: The production backend uses NestJS. This repository contains demo placeholders only.
+> **Note**: The production backend uses **NestJS**. This repository contains demo placeholders only. The `src/` folder shows a simplified structure for demonstration purposes.
 
 ## 👤 Author
 
