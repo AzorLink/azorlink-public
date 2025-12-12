@@ -1,108 +1,80 @@
-# azorlink-public
+# AzorLink — WhatsApp Assistant for Azorean Tourism
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Semântica 2025](https://img.shields.io/badge/Semântica-2025-blue.svg)](https://semantica2025.pt)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
+[![Semântica 2025](https://img.shields.io/badge/semântica-2025-blue)](https://semantica2025.pt)
 
-> Public-facing version of the AzorLink project with documentation, structure and demo code.
+> Public-facing repository for **AzorLink**: documentation, architecture and **safe demo placeholders** (no private automation logic, no tokens, no production rules).
 
-AzorLink is a modern web platform designed to facilitate the management and sharing of digital resources. This repository contains the public-facing documentation, project structure, and demo code for the AzorLink platform.
+## 🌊 What is AzorLink?
 
-## ✨ Features
+AzorLink helps local lodging owners in the Azores automate guest communication through **WhatsApp**:
+- Check-in instructions
+- FAQs (Wi-Fi, parking, arrival time)
+- House rules
+- Local recommendations
+- Multilingual support (PT/EN/FR/DE)
 
-- 🏗️ **Modern Architecture** - Clean, scalable structure following best practices
-- 📚 **Comprehensive Documentation** - Detailed guides and architecture diagrams
-- 🔧 **Type-Safe** - Built with TypeScript for better developer experience
-- 🎨 **Modern Frontend** - Next.js 14+ with React 18+ and Tailwind CSS
-- 🚀 **RESTful API** - Well-structured backend with Express.js
-- 📖 **Well Documented** - Architecture diagrams, API docs, and contribution guides
+This repo exists to show the product vision and engineering structure **without exposing** proprietary automation logic.
 
-## 🚀 Quick Start
+## ✨ Key Features (Public-safe)
 
-### Prerequisites
+- 🏗️ Clean, scalable project structure (Semântica 2025)
+- 📚 Comprehensive documentation and architecture diagrams
+- 🎨 Demo frontend skeleton (Next.js App Router)
+- 🔧 Demo backend skeleton (placeholders only)
+- 🤝 Contribution + security policy
+- 📖 API documentation structure
 
-- **Node.js** 18+ or higher
-- **pnpm** (package manager)
+## 🔒 What's NOT included here
 
-### Installation
+To protect the product and clients:
+- ❌ No WhatsApp/360Dialog tokens
+- ❌ No real automation rules or intent engine
+- ❌ No production database or infrastructure configuration
+- ❌ No proprietary business logic
 
-1. **Clone the repository:**
-```bash
-git clone https://github.com/AzorLink/azorlink-public.git
-cd azorlink-public
-```
-
-2. **Install dependencies:**
-```bash
-pnpm install
-```
-
-3. **Configure environment variables:**
-```bash
-cp .env.example .env
-# Edit the .env file with your configurations
-```
-
-4. **Run in development mode:**
-```bash
-pnpm dev
-```
-
-The server will be available at `http://localhost:8081`
-
-## 📁 Project Structure
+## 🧱 Project Structure
 
 ```
 azorlink-public/
-├── src/                    # Backend source code
-│   ├── api/               # API routes and controllers
-│   │   ├── controllers/   # Request handlers
-│   │   └── routes/        # Route definitions
-│   ├── services/          # Business logic layer
-│   ├── models/            # Data models
-│   ├── middleware/        # Express middleware
-│   ├── utils/             # Utility functions
-│   ├── config/            # Configuration files
-│   └── types/             # TypeScript type definitions
-├── frontend/              # Next.js application
-│   ├── app/               # Next.js App Router
-│   │   ├── about/         # About page
-│   │   ├── layout.tsx     # Root layout
-│   │   └── page.tsx       # Home page
-│   ├── components/        # React components
-│   │   ├── Header.tsx     # Navigation header
-│   │   ├── Footer.tsx     # Page footer
-│   │   ├── Button.tsx     # Reusable button
-│   │   └── Card.tsx       # Card component
-│   ├── lib/               # Libraries and utilities
-│   │   ├── api.ts         # API client
-│   │   ├── utils.ts       # Helper functions
-│   │   └── hooks/         # Custom React hooks
-│   └── public/            # Static assets
-├── docs/                  # Documentation
-│   ├── API.md            # API documentation
-│   └── README.md          # Docs index
-├── architecture/          # Architecture diagrams
-│   ├── README.md         # Architecture overview
-│   ├── system-diagram.txt
-│   ├── backend-architecture.txt
-│   ├── frontend-architecture.txt
-│   └── ...
-└── tests/                 # Test files
+├── frontend/          # Next.js demo skeleton
+├── src/               # Backend demo skeleton (placeholders)
+├── docs/              # Documentation and API specs
+├── architecture/      # Diagrams and technical overview
+├── ROADMAP.md         # Development roadmap
+├── CONTRIBUTING.md    # Contribution guidelines
+└── SECURITY.md        # Security policy
 ```
 
-## 🛠️ Technologies
+## 📸 Screenshots
 
-### Backend
-- **Node.js** - JavaScript runtime
-- **TypeScript** - Type-safe JavaScript
-- **Express.js** - Web framework
-- **RESTful API** - API architecture
+> Coming soon (public-safe UI previews).  
+Placeholders live in `docs/`.
 
-### Frontend
-- **Next.js 14+** - React framework with App Router
-- **React 18+** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first CSS framework
+## 🗺️ Roadmap
+
+See [`ROADMAP.md`](./ROADMAP.md) for detailed development plans.
+
+## 🌍 Why the Azores?
+
+Built with the reality of Azorean hosts in mind:
+- **Seasonal overload** — Peak tourism periods create communication bottlenecks
+- **Repetitive questions** — Same FAQs from guests every season
+- **Multilingual guests** — Visitors from Portugal, UK, France, Germany, and beyond
+- **Simple tools** — Solutions that work with what people already use — **WhatsApp**
+
+AzorLink bridges the gap between traditional hospitality and modern automation, designed specifically for the unique needs of Azorean tourism.
+
+## 🚀 Demo Only
+
+**⚠️ Important**: This repository contains **demo placeholders only**. 
+
+The code here is for:
+- ✅ Documentation and structure showcase
+- ✅ Architecture demonstration
+- ✅ Contribution guidelines
+
+**For access to the private core or production deployment, please contact the maintainers.**
 
 ## 📚 Documentation
 
@@ -112,48 +84,46 @@ azorlink-public/
 - 🔒 [Security](./SECURITY.md) - Security policy and reporting
 - 📖 [API Documentation](./docs/API.md) - API endpoints and usage
 
-## 🏗️ Architecture
+## 🛠️ Technologies (Demo Stack)
 
-The project follows a clean architecture pattern with clear separation of concerns:
+### Frontend
+- **Next.js 14+** - React framework with App Router
+- **React 18+** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first CSS framework
 
-- **Backend**: Layered architecture (Routes → Controllers → Services → Models)
-- **Frontend**: Component-based architecture with Next.js App Router
-- **Documentation**: Comprehensive diagrams and technical documentation
+### Backend (Placeholder)
+- **Demo backend skeleton** - Structure only (no production logic)
+- **TypeScript** - Type-safe codebase
 
-See the [architecture documentation](./architecture/README.md) for detailed diagrams and explanations.
+> **Note**: The production backend uses NestJS. This repository contains demo placeholders only.
 
-## 🤝 Contributing
+## 👤 Author
 
-We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details on:
-
-- Code of conduct
-- How to submit pull requests
-- Development setup
-- Coding standards
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-
-## 🔒 Security
-
-If you discover a security vulnerability, please consult our [Security Policy](./SECURITY.md) before reporting.
+**Hugo Melo** — Founder  
+Azores / Luxembourg
 
 ## 📞 Contact & Support
 
 - 📧 **Issues**: [GitHub Issues](https://github.com/AzorLink/azorlink-public/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/AzorLink/azorlink-public/discussions)
+- 🔒 **Security**: See [SECURITY.md](./SECURITY.md)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
 - **Semântica 2025** - For inspiration and guidelines
 - **All Contributors** - Who helped make this project possible
+- **Azorean Tourism Community** - For feedback and support
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by the AzorLink Team**
+**Made with ❤️ for the Azores**
 
 [⭐ Star us on GitHub](https://github.com/AzorLink/azorlink-public) • [📖 Read the Docs](./docs/README.md) • [🐛 Report Bug](https://github.com/AzorLink/azorlink-public/issues)
 
@@ -161,4 +131,4 @@ If you discover a security vulnerability, please consult our [Security Policy](.
 
 ---
 
-> **⚠️ Note**: This is a public repository. Do not include sensitive information, credentials, or private business logic.
+> **⚠️ Status**: This is a **public demo repository**. No private automation logic, tokens, or production configurations are included.
