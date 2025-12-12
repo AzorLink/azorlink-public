@@ -1,117 +1,116 @@
-# Guia de Contribuição
+# Contributing Guide
 
-Obrigado pelo seu interesse em contribuir para o AzorLink! Este documento fornece diretrizes para contribuir com o projeto.
+Thank you for your interest in contributing to AzorLink! This document provides guidelines for contributing to the project.
 
-## 📋 Código de Conduta
+## 📋 Code of Conduct
 
-Ao participar neste projeto, concorda em manter um ambiente respeitoso e acolhedor para todos os contribuidores.
+By participating in this project, you agree to maintain a respectful and welcoming environment for all contributors.
 
-## 🚀 Como Contribuir
+## 🚀 How to Contribute
 
-### Reportar Bugs
+### Reporting Bugs
 
-1. Verifique se o bug já não foi reportado nas [Issues](https://github.com/your-org/azorlink-public/issues)
-2. Se não existir, crie uma nova issue com:
-   - Descrição clara do problema
-   - Passos para reproduzir
-   - Comportamento esperado vs. atual
-   - Ambiente (OS, versão do Node, etc.)
-   - Screenshots se aplicável
+1. Check if the bug has not already been reported in [Issues](https://github.com/AzorLink/azorlink-public/issues)
+2. If it doesn't exist, create a new issue with:
+   - Clear description of the problem
+   - Steps to reproduce
+   - Expected vs. current behavior
+   - Environment (OS, Node version, etc.)
+   - Screenshots if applicable
 
-### Sugerir Funcionalidades
+### Suggesting Features
 
-1. Verifique se a funcionalidade já não foi sugerida
-2. Crie uma issue com a tag `enhancement`
-3. Descreva:
-   - O problema que resolve
-   - A solução proposta
-   - Alternativas consideradas
-   - Impacto esperado
+1. Check if the feature has not already been suggested
+2. Create an issue with the `enhancement` tag
+3. Describe:
+   - The problem it solves
+   - The proposed solution
+   - Alternatives considered
+   - Expected impact
 
-### Contribuir com Código
+### Contributing Code
 
-1. **Fork o repositório**
-2. **Crie uma branch** para a sua feature/fix:
+1. **Fork the repository**
+2. **Create a branch** for your feature/fix:
    ```bash
-   git checkout -b feature/nova-funcionalidade
+   git checkout -b feature/new-feature
    ```
-3. **Faça as alterações** seguindo os padrões do projeto
-4. **Teste as suas alterações**:
+3. **Make your changes** following the project standards
+4. **Test your changes**:
    ```bash
    pnpm test
    ```
-5. **Commit** com mensagens claras:
+5. **Commit** with clear messages:
    ```bash
-   git commit -m "feat: adiciona nova funcionalidade X"
+   git commit -m "feat: add new feature X"
    ```
-6. **Push** para a sua branch:
+6. **Push** to your branch:
    ```bash
-   git push origin feature/nova-funcionalidade
+   git push origin feature/new-feature
    ```
-7. **Abra um Pull Request** com descrição detalhada
+7. **Open a Pull Request** with detailed description
 
-## 📝 Padrões de Código
+## 📝 Code Standards
 
-### Convenções de Nomenclatura
+### Naming Conventions
 
-- **Variáveis e funções**: camelCase
-- **Componentes React**: PascalCase
-- **Ficheiros**: kebab-case
-- **Constantes**: UPPER_SNAKE_CASE
+- **Variables and functions**: camelCase
+- **React components**: PascalCase
+- **Files**: kebab-case
+- **Constants**: UPPER_SNAKE_CASE
 
-### Estrutura de Commits
+### Commit Structure
 
-Seguimos o [Conventional Commits](https://www.conventionalcommits.org/):
+We follow [Conventional Commits](https://www.conventionalcommits.org/):
 
-- `feat:` Nova funcionalidade
-- `fix:` Correção de bug
-- `docs:` Documentação
-- `style:` Formatação (não afeta código)
-- `refactor:` Refatoração
-- `test:` Testes
-- `chore:` Tarefas de manutenção
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation
+- `style:` Formatting (doesn't affect code)
+- `refactor:` Refactoring
+- `test:` Tests
+- `chore:` Maintenance tasks
 
-### Formatação
+### Formatting
 
-- Use Prettier para formatação automática
-- Use ESLint para linting
-- Mantenha linhas com máximo de 100 caracteres
-- Use 2 espaços para indentação
+- Use Prettier for automatic formatting
+- Use ESLint for linting
+- Keep lines with maximum of 100 characters
+- Use 2 spaces for indentation
 
-## 🧪 Testes
+## 🧪 Testing
 
-- Escreva testes para novas funcionalidades
-- Mantenha cobertura de testes > 80%
-- Execute todos os testes antes de submeter PR:
+- Write tests for new features
+- Maintain test coverage > 80%
+- Run all tests before submitting PR:
   ```bash
   pnpm test
   pnpm test:coverage
   ```
 
-## 📚 Documentação
+## 📚 Documentation
 
-- Atualize a documentação para novas funcionalidades
-- Adicione comentários JSDoc para funções públicas
-- Mantenha o README atualizado
+- Update documentation for new features
+- Add JSDoc comments for public functions
+- Keep the README updated
 
-## 🔍 Processo de Revisão
+## 🔍 Review Process
 
-1. Todos os PRs são revisados por pelo menos um mantenedor
-2. Pode ser solicitado fazer alterações
-3. Após aprovação, o PR será merged
-4. Mantenedores podem fazer squash antes de merge
+1. All PRs are reviewed by at least one maintainer
+2. You may be asked to make changes
+3. After approval, the PR will be merged
+4. Maintainers may squash before merge
 
-## ❓ Dúvidas?
+## ❓ Questions?
 
-- Abra uma issue com a tag `question`
-- Consulte a documentação no diretório `/docs`
-- Contacte os mantenedores
+- Open an issue with the `question` tag
+- Consult the documentation in the `/docs` directory
+- Contact the maintainers
 
-## 🙏 Reconhecimento
+## 🙏 Recognition
 
-Todos os contribuidores serão reconhecidos no README e em releases do projeto.
+All contributors will be recognized in the README and project releases.
 
 ---
 
-Obrigado por contribuir para o AzorLink! 🎉
-
+Thank you for contributing to AzorLink! 🎉

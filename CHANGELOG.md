@@ -1,27 +1,26 @@
 # Changelog
 
-Todas as mudanças notáveis neste projeto serão documentadas neste ficheiro.
+All notable changes to this project will be documented in this file.
 
-O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-PT/1.0.0/),
-e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-PT/).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-### Adicionado
-- Estrutura inicial do repositório público
-- Documentação base do projeto
-- Estrutura do backend (Node.js + Express + TypeScript)
-- Estrutura do frontend (Next.js + React + TypeScript)
-- Diagramas de arquitetura
-- Guias de contribuição e segurança
+### Added
+- Initial public repository structure
+- Base project documentation
+- Backend structure (Node.js + Express + TypeScript)
+- Frontend structure (Next.js + React + TypeScript)
+- Architecture diagrams
+- Contributing and security guides
 
 ## [1.0.0] - 2025-01-XX
 
-### Adicionado
-- Versão inicial do projeto
-- TODO: Adicionar funcionalidades implementadas
+### Added
+- Initial project version
+- TODO: Add implemented features
 
 ---
 
-**Nota**: Este changelog será atualizado conforme o desenvolvimento do projeto avança.
-
+**Note**: This changelog will be updated as the project development progresses.

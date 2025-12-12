@@ -1,31 +1,30 @@
-# Documentação AzorLink
+# AzorLink Documentation
 
-Esta pasta contém documentação visual e screenshots do projeto AzorLink.
+This folder contains visual documentation and screenshots of the AzorLink project.
 
 ## 📸 Screenshots
 
-### Interface Principal
-- `screenshot-home.png` - [image here] - Página inicial da aplicação
-- `screenshot-dashboard.png` - [image here] - Dashboard principal
-- `screenshot-resources.png` - [image here] - Gestão de recursos
+### Main Interface
+- `screenshot-home.png` - [image here] - Application home page
+- `screenshot-dashboard.png` - [image here] - Main dashboard
+- `screenshot-resources.png` - [image here] - Resource management
 
-### Funcionalidades
-- `screenshot-feature-1.png` - [image here] - Funcionalidade 1
-- `screenshot-feature-2.png` - [image here] - Funcionalidade 2
-- `screenshot-feature-3.png` - [image here] - Funcionalidade 3
+### Features
+- `screenshot-feature-1.png` - [image here] - Feature 1
+- `screenshot-feature-2.png` - [image here] - Feature 2
+- `screenshot-feature-3.png` - [image here] - Feature 3
 
 ### Mobile
-- `screenshot-mobile-home.png` - [image here] - Interface mobile - Home
-- `screenshot-mobile-menu.png` - [image here] - Interface mobile - Menu
+- `screenshot-mobile-home.png` - [image here] - Mobile interface - Home
+- `screenshot-mobile-menu.png` - [image here] - Mobile interface - Menu
 
-## 📝 Notas
+## 📝 Notes
 
-- Todos os screenshots devem ser atualizados após mudanças significativas na UI
-- Manter screenshots organizados por funcionalidade
-- Usar formato PNG para melhor qualidade
-- Incluir legendas descritivas
+- All screenshots should be updated after significant UI changes
+- Keep screenshots organized by functionality
+- Use PNG format for better quality
+- Include descriptive captions
 
 ---
 
-**Nota**: Os screenshots são placeholders. Substituir com imagens reais durante o desenvolvimento.
-
+**Note**: Screenshots are placeholders. Replace with real images during development.

@@ -1,99 +1,98 @@
-# Política de Segurança
+# Security Policy
 
-## 🔒 Versões Suportadas
+## 🔒 Supported Versions
 
-Atualmente, apenas a versão mais recente do AzorLink recebe atualizações de segurança.
+Currently, only the latest version of AzorLink receives security updates.
 
-| Versão | Suportada          |
+| Version | Supported          |
 | ------ | ------------------ |
 | 1.x.x  | :white_check_mark: |
 | < 1.0  | :x:                |
 
-## 🚨 Reportar Vulnerabilidades
+## 🚨 Reporting Vulnerabilities
 
-Se descobrir uma vulnerabilidade de segurança, **NÃO** abra uma issue pública. Em vez disso:
+If you discover a security vulnerability, **DO NOT** open a public issue. Instead:
 
-1. **Email**: Envie um email para security@azorlink.example.com
-2. **Inclua**:
-   - Descrição detalhada da vulnerabilidade
-   - Passos para reproduzir
-   - Impacto potencial
-   - Sugestões de correção (se tiver)
+1. **Email**: Send an email to security@azorlink.example.com
+2. **Include**:
+   - Detailed description of the vulnerability
+   - Steps to reproduce
+   - Potential impact
+   - Fix suggestions (if you have any)
 
-### Processo de Resposta
+### Response Process
 
-- **24 horas**: Confirmação de receção
-- **7 dias**: Avaliação inicial e resposta
-- **30 dias**: Resolução ou plano de ação
-- **90 dias**: Disclosura pública (se aplicável)
+- **24 hours**: Receipt confirmation
+- **7 days**: Initial assessment and response
+- **30 days**: Resolution or action plan
+- **90 days**: Public disclosure (if applicable)
 
-## 🛡️ Boas Práticas de Segurança
+## 🛡️ Security Best Practices
 
-### Para Desenvolvedores
+### For Developers
 
-- Nunca commite credenciais ou chaves de API
-- Use variáveis de ambiente para configurações sensíveis
-- Valide e sanitize todas as entradas do utilizador
-- Use HTTPS em produção
-- Mantenha dependências atualizadas
-- Siga o princípio do menor privilégio
+- Never commit credentials or API keys
+- Use environment variables for sensitive configurations
+- Validate and sanitize all user inputs
+- Use HTTPS in production
+- Keep dependencies updated
+- Follow the principle of least privilege
 
-### Para Utilizadores
+### For Users
 
-- Mantenha o software atualizado
-- Use senhas fortes e únicas
-- Ative autenticação de dois fatores quando disponível
-- Não partilhe credenciais
-- Reporte comportamentos suspeitos
+- Keep software updated
+- Use strong and unique passwords
+- Enable two-factor authentication when available
+- Do not share credentials
+- Report suspicious behavior
 
-## 🔐 Medidas de Segurança Implementadas
+## 🔐 Implemented Security Measures
 
-### Autenticação e Autorização
-- [ ] TODO: Implementar autenticação segura
-- [ ] TODO: Sistema de tokens JWT
+### Authentication and Authorization
+- [ ] TODO: Implement secure authentication
+- [ ] TODO: JWT token system
 - [ ] TODO: Rate limiting
-- [ ] TODO: Proteção CSRF
+- [ ] TODO: CSRF protection
 
-### Proteção de Dados
-- [ ] TODO: Encriptação de dados sensíveis
-- [ ] TODO: Sanitização de inputs
-- [ ] TODO: Validação de dados
-- [ ] TODO: Proteção contra SQL injection
+### Data Protection
+- [ ] TODO: Encryption of sensitive data
+- [ ] TODO: Input sanitization
+- [ ] TODO: Data validation
+- [ ] TODO: SQL injection protection
 
-### Infraestrutura
-- [ ] TODO: HTTPS obrigatório
-- [ ] TODO: Headers de segurança
+### Infrastructure
+- [ ] TODO: Mandatory HTTPS
+- [ ] TODO: Security headers
 - [ ] TODO: Content Security Policy
-- [ ] TODO: Monitorização de segurança
+- [ ] TODO: Security monitoring
 
-## 📋 Checklist de Segurança
+## 📋 Security Checklist
 
-Antes de cada release:
+Before each release:
 
-- [ ] Revisão de código focada em segurança
-- [ ] Análise de dependências vulneráveis
-- [ ] Testes de penetração básicos
-- [ ] Verificação de configurações de segurança
-- [ ] Atualização de documentação de segurança
+- [ ] Security-focused code review
+- [ ] Vulnerable dependencies analysis
+- [ ] Basic penetration testing
+- [ ] Security configuration verification
+- [ ] Security documentation update
 
-## 🔄 Atualizações de Segurança
+## 🔄 Security Updates
 
-- Vulnerabilidades críticas: Patch imediato
-- Vulnerabilidades altas: Patch em 7 dias
-- Vulnerabilidades médias: Patch em 30 dias
-- Vulnerabilidades baixas: Patch no próximo release
+- Critical vulnerabilities: Immediate patch
+- High vulnerabilities: Patch within 7 days
+- Medium vulnerabilities: Patch within 30 days
+- Low vulnerabilities: Patch in next release
 
-## 📚 Recursos
+## 📚 Resources
 
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [Node.js Security Best Practices](https://nodejs.org/en/docs/guides/security/)
 - [Next.js Security](https://nextjs.org/docs/app/building-your-application/configuring/security-headers)
 
-## 📞 Contacto
+## 📞 Contact
 
-Para questões de segurança: security@azorlink.example.com
+For security questions: security@azorlink.example.com
 
 ---
 
-**Nota**: Esta política está sujeita a alterações. Consulte regularmente para estar atualizado.
-
+**Note**: This policy is subject to changes. Check regularly to stay updated.

@@ -1,29 +1,28 @@
-# Arquitetura AzorLink
+# AzorLink Architecture
 
-Este diretório contém diagramas e documentação técnica da arquitetura do projeto AzorLink.
+This directory contains diagrams and technical documentation of the AzorLink project architecture.
 
-## 📐 Diagramas
+## 📐 Diagrams
 
-### Arquitetura Geral
-- `architecture-overview.txt` - Visão geral da arquitetura do sistema
-- `system-diagram.txt` - Diagrama do sistema completo
-- `database-schema.txt` - Esquema da base de dados
+### General Architecture
+- `architecture-overview.txt` - System architecture overview
+- `system-diagram.txt` - Complete system diagram
+- `database-schema.txt` - Database schema
 
-### Componentes
-- `backend-architecture.txt` - Arquitetura do backend
-- `frontend-architecture.txt` - Arquitetura do frontend
-- `api-design.txt` - Design da API REST
+### Components
+- `backend-architecture.txt` - Backend architecture
+- `frontend-architecture.txt` - Frontend architecture
+- `api-design.txt` - REST API design
 
-### Fluxos
-- `authentication-flow.txt` - Fluxo de autenticação
-- `data-flow.txt` - Fluxo de dados
-- `deployment-diagram.txt` - Diagrama de deployment
+### Flows
+- `authentication-flow.txt` - Authentication flow
+- `data-flow.txt` - Data flow
+- `deployment-diagram.txt` - Deployment diagram
 
-## 🏗️ Estrutura
+## 🏗️ Structure
 
-A arquitetura segue os princípios da Semântica 2025 e boas práticas de desenvolvimento moderno.
+The architecture follows Semântica 2025 principles and modern development best practices.
 
 ---
 
-**Nota**: Todos os diagramas estão em formato texto (ASCII art) para facilitar a visualização e versionamento.
-
+**Note**: All diagrams are in text format (ASCII art) to facilitate visualization and versioning.
