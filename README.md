@@ -44,10 +44,10 @@ src/            # backend skeleton (placeholders)
 
 ## 📸 Screenshots
 
-Public-safe placeholders live in `docs/`.
+Public-safe UI previews will be added here.
 
-- `docs/screens/dashboard-placeholder.png`
-- `docs/screens/whatsapp-flow-placeholder.png`
+The goal is to visually demonstrate the product without exposing
+client data, private automation logic or production credentials.
 
 ## 🗺️ Roadmap
 
