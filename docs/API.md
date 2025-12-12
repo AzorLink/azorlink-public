@@ -1,11 +1,11 @@
-# Documentação da API
+# API Documentation
 
-## 📡 Endpoints da API
+## 📡 API Endpoints
 
-### Autenticação
+### Authentication
 
 #### POST /api/auth/login
-Autenticar utilizador.
+Authenticate user.
 
 **Request:**
 ```json
@@ -28,7 +28,7 @@ Autenticar utilizador.
 ```
 
 #### POST /api/auth/register
-Registar novo utilizador.
+Register new user.
 
 **Request:**
 ```json
@@ -51,10 +51,10 @@ Registar novo utilizador.
 }
 ```
 
-### Utilizadores
+### Users
 
 #### GET /api/users
-Listar todos os utilizadores.
+List all users.
 
 **Headers:**
 ```
@@ -75,7 +75,7 @@ Authorization: Bearer {token}
 ```
 
 #### GET /api/users/:id
-Obter utilizador específico.
+Get specific user.
 
 **Response:**
 ```json
@@ -88,10 +88,10 @@ Obter utilizador específico.
 }
 ```
 
-### Recursos
+### Resources
 
 #### GET /api/resources
-Listar todos os recursos.
+List all resources.
 
 **Response:**
 ```json
@@ -107,7 +107,7 @@ Listar todos os recursos.
 ```
 
 #### POST /api/resources
-Criar novo recurso.
+Create new resource.
 
 **Request:**
 ```json
@@ -128,25 +128,24 @@ Criar novo recurso.
 }
 ```
 
-## 🔒 Autenticação
+## 🔒 Authentication
 
-A maioria dos endpoints requer autenticação via JWT token no header:
+Most endpoints require authentication via JWT token in the header:
 
 ```
 Authorization: Bearer {token}
 ```
 
-## 📊 Códigos de Status
+## 📊 Status Codes
 
-- `200` - Sucesso
-- `201` - Criado com sucesso
-- `400` - Erro de validação
-- `401` - Não autenticado
-- `403` - Não autorizado
-- `404` - Não encontrado
-- `500` - Erro interno do servidor
+- `200` - Success
+- `201` - Created successfully
+- `400` - Validation error
+- `401` - Unauthenticated
+- `403` - Unauthorized
+- `404` - Not found
+- `500` - Internal server error
 
-## ⚠️ Nota
+## ⚠️ Note
 
-Esta documentação é um placeholder. Os endpoints reais serão documentados durante o desenvolvimento.
-
+This documentation is a placeholder. Real endpoints will be documented during development.
