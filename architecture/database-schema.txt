@@ -1,5 +1,5 @@
 ╔══════════════════════════════════════════════════════════════════╗
-║                    ESQUEMA DA BASE DE DADOS                     ║
+║                      DATABASE SCHEMA                             ║
 ║                      AzorLink Database Schema                    ║
 ╚══════════════════════════════════════════════════════════════════╝
 
@@ -54,24 +54,24 @@
 │  created_at      │  TIMESTAMP DEFAULT NOW()                     │
 └─────────────────────────────────────────────────────────────────┘
 
-RELACIONAMENTOS:
-═══════════════
-- Users 1:N Resources (um utilizador pode ter vários recursos)
-- Resources 1:N ResourceMetadata (um recurso pode ter vários metadados)
-- Users 1:N Sessions (um utilizador pode ter várias sessões)
+RELATIONSHIPS:
+═════════════
+- Users 1:N Resources (one user can have many resources)
+- Resources 1:N ResourceMetadata (one resource can have many metadata entries)
+- Users 1:N Sessions (one user can have many sessions)
 
-ÍNDICES:
-════════
+INDEXES:
+═══════
 - users.email (UNIQUE)
 - resources.user_id
 - resources.status
 - sessions.token
 - sessions.user_id
 
-NOTAS:
-══════
-- Todos os timestamps em UTC
-- Soft delete implementado (deleted_at)
-- UUIDs para melhor distribuição
-- TODO: Adicionar mais tabelas conforme necessário
+NOTES:
+═════
+- All timestamps in UTC
+- Soft delete implemented (deleted_at)
+- UUIDs for better distribution
+- TODO: Add more tables as needed
 

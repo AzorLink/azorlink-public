@@ -1,7 +1,7 @@
 {
   "name": "azorlink-public",
   "version": "1.0.0",
-  "description": "Repositório público do projeto AzorLink - Semântica 2025",
+  "description": "Public showcase repository for AzorLink (docs, architecture, and safe demo placeholders) — Semântica 2025",
   "private": true,
   "scripts": {
     "dev": "pnpm --filter frontend dev",

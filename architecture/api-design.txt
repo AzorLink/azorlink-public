@@ -15,27 +15,27 @@ Base URL: https://api.azorlink.example.com/v1
 
 AUTHENTICATION
 ══════════════
-POST   /auth/login          - Autenticar utilizador
-POST   /auth/register       - Registar novo utilizador
-POST   /auth/logout         - Terminar sessão
-POST   /auth/refresh        - Renovar token
-GET    /auth/me             - Obter utilizador atual
+POST   /auth/login          - Authenticate user
+POST   /auth/register       - Register new user
+POST   /auth/logout         - End session
+POST   /auth/refresh        - Refresh token
+GET    /auth/me             - Get current user
 
 USERS
 ═════
-GET    /users               - Listar utilizadores
-GET    /users/:id           - Obter utilizador
-POST   /users               - Criar utilizador
-PUT    /users/:id           - Atualizar utilizador
-DELETE /users/:id           - Eliminar utilizador
+GET    /users               - List users
+GET    /users/:id           - Get user
+POST   /users               - Create user
+PUT    /users/:id           - Update user
+DELETE /users/:id           - Delete user
 
 RESOURCES
 ═════════
-GET    /resources           - Listar recursos
-GET    /resources/:id       - Obter recurso
-POST   /resources           - Criar recurso
-PUT    /resources/:id       - Atualizar recurso
-DELETE /resources/:id       - Eliminar recurso
+GET    /resources           - List resources
+GET    /resources/:id       - Get resource
+POST   /resources           - Create resource
+PUT    /resources/:id       - Update resource
+DELETE /resources/:id       - Delete resource
 
 HEALTH
 ══════

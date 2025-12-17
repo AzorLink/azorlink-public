@@ -4,19 +4,10 @@ This folder contains visual documentation and screenshots of the AzorLink projec
 
 ## 📸 Screenshots
 
-### Main Interface
-- `screenshot-home.png` - [image here] - Application home page
-- `screenshot-dashboard.png` - [image here] - Main dashboard
-- `screenshot-resources.png` - [image here] - Resource management
+Public-safe UI previews will be added over time.
 
-### Features
-- `screenshot-feature-1.png` - [image here] - Feature 1
-- `screenshot-feature-2.png` - [image here] - Feature 2
-- `screenshot-feature-3.png` - [image here] - Feature 3
-
-### Mobile
-- `screenshot-mobile-home.png` - [image here] - Mobile interface - Home
-- `screenshot-mobile-menu.png` - [image here] - Mobile interface - Menu
+- Store images in `docs/screens/`
+- Do **not** include client data, tokens, phone numbers, or private automation logic
 
 ## 📝 Notes
 

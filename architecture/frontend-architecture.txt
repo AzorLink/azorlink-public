@@ -1,5 +1,5 @@
 ╔══════════════════════════════════════════════════════════════════╗
-║                  ARQUITETURA DO FRONTEND                        ║
+║                  FRONTEND ARCHITECTURE                          ║
 ║                    Next.js 14 + React + TypeScript              ║
 ╚══════════════════════════════════════════════════════════════════╝
 
@@ -7,10 +7,10 @@
 │                      APP ROUTER (Next.js)                        │
 │                         app/                                     │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  layout.tsx          - Layout raiz                       │   │
-│  │  page.tsx            - Página inicial                    │   │
-│  │  globals.css         - Estilos globais                   │   │
-│  │  └── about/          - Rota /about                        │   │
+│  │  layout.tsx          - Root layout                        │   │
+│  │  page.tsx            - Home page                          │   │
+│  │  globals.css         - Global styles                      │   │
+│  │  └── about/          - Route /about                       │   │
 │  │      └── page.tsx                                        │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────┬──────────────────────────────────┘
@@ -21,16 +21,16 @@
 │                      components/                                 │
 │  ┌──────────────────────────────────────────────────────────┐   │
 │  │  UI Components                                           │   │
-│  │  ├── Header.tsx         - Cabeçalho                     │   │
-│  │  ├── Footer.tsx         - Rodapé                         │   │
-│  │  ├── Button.tsx         - Botão reutilizável             │   │
-│  │  ├── Card.tsx           - Cartão reutilizável           │   │
-│  │  └── ...                - Mais componentes               │   │
+│  │  ├── Header.tsx         - Header                          │   │
+│  │  ├── Footer.tsx         - Footer                          │   │
+│  │  ├── Button.tsx         - Reusable button                 │   │
+│  │  ├── Card.tsx           - Reusable card                   │   │
+│  │  └── ...                - More components                 │   │
 │  │                                                           │   │
 │  │  Feature Components                                      │   │
-│  │  ├── UserProfile/       - Perfil de utilizador          │   │
-│  │  ├── ResourceList/      - Lista de recursos              │   │
-│  │  └── ...                - Mais features                  │   │
+│  │  ├── UserProfile/       - User profile                    │   │
+│  │  ├── ResourceList/      - Resource list                   │   │
+│  │  └── ...                - More features                   │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
@@ -39,12 +39,12 @@
 │                      LIBRARY LAYER                               │
 │                         lib/                                     │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │  api.ts              - Cliente de API                    │   │
-│  │  utils.ts            - Funções utilitárias               │   │
+│  │  api.ts              - API client                         │   │
+│  │  utils.ts            - Utility functions                   │   │
 │  │  hooks/                                                  │   │
-│  │    └── useAuth.ts    - Hook de autenticação              │   │
+│  │    └── useAuth.ts    - Authentication hook                │   │
 │  │  types/                                                  │   │
-│  │    └── index.ts      - Definições de tipos              │   │
+│  │    └── index.ts      - Type definitions                   │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
@@ -53,8 +53,8 @@
 │                      STATE MANAGEMENT                            │
 │  ┌──────────────────────────────────────────────────────────┐   │
 │  │  - React Hooks (useState, useEffect)                     │   │
-│  │  - Context API (se necessário)                           │   │
-│  │  - Server State (React Query - opcional)                │   │
+│  │  - Context API (if needed)                                │   │
+│  │  - Server State (React Query - optional)                  │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
@@ -63,7 +63,7 @@
 │                      STYLING LAYER                               │
 │  ┌──────────────────────────────────────────────────────────┐   │
 │  │  - Tailwind CSS                                          │   │
-│  │  - CSS Modules (opcional)                                │   │
+│  │  - CSS Modules (optional)                                 │   │
 │  │  - Global Styles                                          │   │
 │  └──────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────┘
@@ -78,14 +78,14 @@
 │  └──────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────┘
 
-FLUXO DE DADOS:
-═══════════════
-1. User interage com Component
-2. Component usa Hook para estado/comunicação
-3. Hook chama API Client
-4. API Client faz requisição HTTP para Backend
-5. Resposta retorna e atualiza estado
-6. Component re-renderiza com novos dados
+DATA FLOW:
+═════════
+1. User interacts with a Component
+2. Component uses a Hook for state/communication
+3. Hook calls the API Client
+4. API Client sends an HTTP request to the Backend
+5. Response returns and updates state
+6. Component re-renders with the new data
 
 PRINCÍPIOS:
 ═══════════
@@ -93,7 +93,7 @@ PRINCÍPIOS:
 ✓ Server-side rendering (SSR)
 ✓ Static site generation (SSG)
 ✓ Client-side interactivity
-✓ Type safety com TypeScript
+✓ Type safety with TypeScript
 ✓ Responsive design
 ✓ Accessibility (a11y)
 

@@ -1,13 +1,13 @@
 ╔══════════════════════════════════════════════════════════════════╗
-║                    ARQUITETURA AZORLINK                          ║
-║                      Visão Geral do Sistema                       ║
+║                    AZORLINK ARCHITECTURE                         ║
+║                      System Overview                              ║
 ║                                                                   ║
 ║  ⚠️ NOTE: This shows a DEMO structure.                          ║
 ║     Production backend uses NestJS (not shown here).            ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 ┌─────────────────────────────────────────────────────────────────┐
-│                         CLIENTE (Browser)                        │
+│                         CLIENT (Browser)                          │
 │                                                                   │
 │  ┌──────────────────────────────────────────────────────────┐   │
 │  │              Next.js Frontend Application                │   │
@@ -60,8 +60,8 @@
 │  └──────────────────────────────────────────────────────────┘   │
 └──────────────────────────────────────────────────────────────────┘
 
-LEGENDA:
-═══════
+LEGEND:
+══════
 - Frontend: Next.js with React and TypeScript
 - Backend (Demo): Node.js with TypeScript (simplified structure)
 - Backend (Production): NestJS (not included in this repo)
@@ -69,8 +69,8 @@ LEGENDA:
 - Communication: REST API via HTTPS
 - Authentication: JWT Tokens (demo structure)
 
-CARACTERÍSTICAS:
-════════════════
+KEY CHARACTERISTICS:
+═════════════════
 ✓ Demo structure for public showcase
 ✓ Layered architecture (simplified)
 ✓ RESTful API structure (demo)

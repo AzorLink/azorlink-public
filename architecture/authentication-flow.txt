@@ -1,5 +1,5 @@
 ╔══════════════════════════════════════════════════════════════════╗
-║                    FLUXO DE AUTENTICAÇÃO                        ║
+║                    AUTHENTICATION FLOW                           ║
 ║                      JWT Token Based Auth                        ║
 ╚══════════════════════════════════════════════════════════════════╝
 
@@ -11,7 +11,7 @@
     │   USER   │
     └────┬─────┘
          │
-         │ 1. Submete credenciais
+         │ 1. Submits credentials
          ▼
     ┌─────────────────┐
     │   FRONTEND      │
@@ -26,15 +26,15 @@
     │  Auth Controller │
     └────┬────────────┘
          │
-         │ 3. Valida credenciais
+         │ 3. Validates credentials
          ▼
     ┌─────────────────┐
     │  Auth Service   │
-    │  - Verifica user│
-    │  - Valida pass  │
+    │  - Checks user  │
+    │  - Validates pwd│
     └────┬────────────┘
          │
-         │ 4. Consulta database
+         │ 4. Queries database
          ▼
     ┌─────────────────┐
     │    DATABASE      │
@@ -94,9 +94,9 @@
     │  Auth Middleware │
     └────┬────────────┘
          │
-         │ 3. Valida token
-         │    - Verifica assinatura
-         │    - Verifica expiração
+         │ 3. Validates token
+         │    - Checks signature
+         │    - Checks expiration
          ▼
     ┌─────────────────┐
     │  Token Valid?   │
@@ -139,7 +139,7 @@
     │  Auth Service   │
     └────┬────────────┘
          │
-         │ 3. Valida refresh token
+         │ 3. Validates refresh token
          ▼
     ┌─────────────────┐
     │  Valid?         │

@@ -1,5 +1,5 @@
 ╔══════════════════════════════════════════════════════════════════╗
-║                    DIAGRAMA DO SISTEMA                           ║
+║                        SYSTEM DIAGRAM                            ║
 ║                      AzorLink - Semântica 2025                   ║
 ╚══════════════════════════════════════════════════════════════════╝
 
@@ -69,23 +69,23 @@
         │  └──────────┘  └──────────┘            │
         └──────────────────────────────────────────┘
 
-FLUXO DE DADOS:
-═══════════════
-1. User interage com Frontend
-2. Frontend faz requisição para Backend API
-3. Backend processa através das camadas:
-   - API Layer (validação, autenticação)
-   - Business Logic Layer (lógica de negócio)
-   - Data Access Layer (acesso a dados)
-4. Backend consulta Database
-5. Resposta retorna através das camadas
-6. Frontend atualiza UI
+DATA FLOW:
+═════════
+1. User interacts with the Frontend
+2. Frontend sends a request to the Backend API
+3. Backend processes the request through layers:
+   - API Layer (validation, authentication)
+   - Business Logic Layer (business logic)
+   - Data Access Layer (data access)
+4. Backend queries the Database
+5. Response returns through the layers
+6. Frontend updates the UI
 
-SEGURANÇA:
-══════════
-- HTTPS para comunicação
-- JWT para autenticação
-- Validação de inputs
+SECURITY:
+════════
+- HTTPS for communication
+- JWT for authentication
+- Input validation
 - Rate limiting
-- CORS configurado
+- CORS configured
 

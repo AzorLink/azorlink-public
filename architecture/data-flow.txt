@@ -1,5 +1,5 @@
 ╔══════════════════════════════════════════════════════════════════╗
-║                        FLUXO DE DADOS                            ║
+║                          DATA FLOW                               ║
 ║                    Request/Response Cycle                        ║
 ╚══════════════════════════════════════════════════════════════════╝
 
@@ -11,52 +11,52 @@ User Input
     │
     ▼
 ┌─────────────────┐
-│  Form Component │  - Validação client-side
+│  Form Component │  - Client-side validation
 └────────┬────────┘
          │
          ▼
 ┌─────────────────┐
-│  API Client     │  - Prepara payload
+│  API Client     │  - Prepare payload
 └────────┬────────┘
          │
          │ POST /api/resources
          │ { title, description, ... }
          ▼
 ┌─────────────────┐
-│  Auth Middleware│  - Verifica autenticação
+│  Auth Middleware│  - Check authentication
 └────────┬────────┘
          │
          ▼
 ┌─────────────────┐
-│  Validation     │  - Valida dados
+│  Validation     │  - Validate data
 │  Middleware     │
 └────────┬────────┘
          │
          ▼
 ┌─────────────────┐
-│  Controller     │  - Recebe request
+│  Controller     │  - Receive request
 └────────┬────────┘
          │
          ▼
 ┌─────────────────┐
-│  Service        │  - Lógica de negócio
+│  Service        │  - Business logic
 └────────┬────────┘
          │
          ▼
 ┌─────────────────┐
-│  Model          │  - Valida schema
+│  Model          │  - Validate schema
 └────────┬────────┘
          │
          │ INSERT INTO resources
          ▼
 ┌─────────────────┐
-│  Database       │  - Persiste dados
+│  Database       │  - Persist data
 └────────┬────────┘
          │
          │ { id, ...created }
          ▼
 ┌─────────────────┐
-│  Service        │  - Transforma resposta
+│  Service        │  - Transform response
 └────────┬────────┘
          │
          ▼
@@ -95,7 +95,7 @@ Component Mount
          │ Request
          ▼
 ┌─────────────────┐
-│  Auth Middleware│  - Verifica token
+│  Auth Middleware│  - Check token
 └────────┬────────┘
          │
          ▼
